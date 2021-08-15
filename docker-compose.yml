@@ -1,0 +1,7 @@
+services:
+  crowsnest:
+      restart: unless-stopped
+      volumes:
+          - "${HOME}/Developer/crowsnest-config.yaml:/app/config.yaml:ro"
+          - "${HOME}/Developer/:/gitrepos/"
+      image: 'psidex/crowsnest:latest'
